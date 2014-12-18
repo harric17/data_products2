@@ -1,1 +1,186 @@
-default
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developing Data Products Project</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Developing Data Products Project">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Developing Data Products Project</h1>
+    <h2>2014</h2>
+    <p><br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>My project Shiny app is hosted at <a href="https://harric17.shinyapps.io/APPNAME/">this website</a>.
+</p>
+
+<p>This is a simple app that uses "melanom" dataset form the ISwR package in R.  The app gets Kaplan-Meier survival parameter estimates and plots Kaplan-Meier curves based on the stratifications specified.  </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Data Set</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>More information on the "melanom" dataset can be found in the  <a href="http://cran.r-project.org/web/packages/ISwR/ISwR.pdf">ISwR package documention</a>.  Specifically see page 18.
+</p>
+
+<p>To save you some trouble here are the variables in the dataset:</p>
+
+<pre><code>## [1] &quot;no&quot;     &quot;status&quot; &quot;days&quot;   &quot;ulc&quot;    &quot;thick&quot;  &quot;sex&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Dataset Continued</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>In this analysis only the variables &quot;days&quot;, &quot;status&quot;, and &quot;sex&quot; are used.  The Shiny app regroups &quot;status&quot; so that levels 2 and 3 are recoded to 0 and considered censored events.  Here a summary of the sex variable which is used for stratification:</p>
+
+<pre><code class="r">table(melanom$sex)
+</code></pre>
+
+<pre><code>## 
+##   1   2 
+## 126  79
+</code></pre>
+
+<p>For the sex variable 1 is female and 2 is male.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>How to Use the Shiny App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This app is pretty straight forward to use.  As long as the user knows how to operate a pulldown menu they should have no problem operating this app.</p>
+
+<p>Kaplain-Meier curves and parameter estimates are displayed for both unstratfied and stratified data depending on the user&#39;s choice.  When choosing to stratify on sex the results of the log-rank test are additionally shown at the bottom.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Conclusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Though this Shiny app is pretty trivial, its usefulness is clear.  It seems like an excellent tool for facilitating both exploration of data as well as communication between programmers/statisticians and other interested parties (e.g. scientists).</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>The End</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center><img src="http://i.imgur.com/0Y5Dy7y.jpg" height="500" width="500"></center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Data Set'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Dataset Continued'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='How to Use the Shiny App'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Conclusion'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='The End'>
+         6
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
